@@ -6,6 +6,7 @@ from flask import jsonify, request, abort
 from models import storage
 from models.place import Place
 from models.review import Review
+from models.user import User
 
 
 @app_views.route('/places/<place_id>/reviews', strict_slashes=False,
