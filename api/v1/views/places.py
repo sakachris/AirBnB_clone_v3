@@ -53,6 +53,7 @@ def add_place(city_id):
     if 'user_id' not in js_data:
         # abort(400, 'Missing user_id')
         return jsonify({"error": "Missing user_id"}), 400
+    user_id = js_data['user_id']
     user = storage.get(User, user_id)
     if not user:
         abort(404)
