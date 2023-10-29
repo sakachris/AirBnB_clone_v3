@@ -63,7 +63,7 @@ def update_city(city_id):
     """ updates a city """
     city = storage.get(City, city_id)
     if not city:
-        abort(400)
+        abort(404)
     js_data = request.get_json()
     if not js_data:
         abort(400, 'Not a JSON')
